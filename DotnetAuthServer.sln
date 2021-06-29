@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAuthServer.API", "DotnetAuthServer.API\DotnetAuthServer.API.csproj", "{D54D8868-FFDE-4649-B738-C2396AF70712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAuthServer.Core", "DotnetAuthServer.Core\DotnetAuthServer.Core.csproj", "{B9AF06E5-A11B-458B-80F5-90E18096A06E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAuthServer.Data", "DotnetAuthServer.Data\DotnetAuthServer.Data.csproj", "{19BFFF8E-52CD-4890-98AA-BFA602644E6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAuthServer.Service", "DotnetAuthServer.Service\DotnetAuthServer.Service.csproj", "{92BC9CF6-9F5E-451A-AD84-43CF75DE5CC3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{D54D8868-FFDE-4649-B738-C2396AF70712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D54D8868-FFDE-4649-B738-C2396AF70712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D54D8868-FFDE-4649-B738-C2396AF70712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9AF06E5-A11B-458B-80F5-90E18096A06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9AF06E5-A11B-458B-80F5-90E18096A06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9AF06E5-A11B-458B-80F5-90E18096A06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9AF06E5-A11B-458B-80F5-90E18096A06E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19BFFF8E-52CD-4890-98AA-BFA602644E6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19BFFF8E-52CD-4890-98AA-BFA602644E6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19BFFF8E-52CD-4890-98AA-BFA602644E6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19BFFF8E-52CD-4890-98AA-BFA602644E6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92BC9CF6-9F5E-451A-AD84-43CF75DE5CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92BC9CF6-9F5E-451A-AD84-43CF75DE5CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92BC9CF6-9F5E-451A-AD84-43CF75DE5CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92BC9CF6-9F5E-451A-AD84-43CF75DE5CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
