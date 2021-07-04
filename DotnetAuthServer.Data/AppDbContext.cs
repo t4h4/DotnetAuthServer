@@ -24,7 +24,7 @@ namespace DotnetAuthServer.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.ApplyConfigurationsFromAssembly(GetType().Assembly);
+            builder.ApplyConfigurationsFromAssembly(GetType().Assembly); // point to configurations
 
             base.OnModelCreating(builder);
         }
