@@ -29,7 +29,7 @@ namespace DotnetAuthServer.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption")); // DI olarak CustomTokenOption gecilebilir.
-            services.Configure<Client>(Configuration.GetSection("Clients"));
+            services.Configure<List<Client>>(Configuration.GetSection("Clients")); //list, because multiple
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
