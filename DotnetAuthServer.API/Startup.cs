@@ -1,3 +1,4 @@
+using DotnetAuthServer.Core.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace DotnetAuthServer.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.Configure<CustomTokenOption>(Configuration.GetSection("TokenOption")); // DI olarak CustomTokenOption gecilebilir.
+            services.Configure<Client>(Configuration.GetSection("Clients"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
