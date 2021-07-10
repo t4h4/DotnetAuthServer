@@ -14,15 +14,16 @@ namespace MicroApp1.API.Controllers
     [ApiController]
     public class StockController : ControllerBase
     {
+        [HttpGet]
         public IActionResult GetStock()
         {
             var userName = HttpContext.User.Identity.Name;
 
-            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier); //FirstOrDefault: ver ya da null donder.
+            var userIdClaim = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier); //FirstOrDefault: ver ya da null donder.
 
-            
 
-            return Ok($" Stock işlemleri  =>  UserName: {userName} - UserId: {userId} ");
+
+            return Ok($" Stock işlemleri  =>  UserName: {userName} - UserId: {userIdClaim.Value} ");
         } 
     }
 }

@@ -14,15 +14,16 @@ namespace MicroApp2.API.Controllers
     [ApiController]
     public class InvoiceController : ControllerBase
     {
+        [HttpGet]
         public IActionResult GetInvoices()
         {
             var userName = HttpContext.User.Identity.Name;
 
-            var userId = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
+            var userIdClaim = User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.NameIdentifier);
 
             
 
-            return Ok($" Invoice işlemleri  =>  UserName: {userName} - UserId: {userId} ");
+            return Ok($" Invoice işlemleri  =>  UserName: {userName} - UserId: {userIdClaim.Value} ");
         }
     }
 }
