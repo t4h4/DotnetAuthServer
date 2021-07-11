@@ -6,6 +6,7 @@ using DotnetAuthServer.Core.UnitOfWork;
 using DotnetAuthServer.Data;
 using DotnetAuthServer.Data.Repositories;
 using DotnetAuthServer.Service.Services;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -86,7 +87,10 @@ namespace DotnetAuthServer.API
                 };
             });
 
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(options =>
+            {
+                options.RegisterValidatorsFromAssemblyContaining<Startup>();
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotnetAuthServer.API", Version = "v1" });
